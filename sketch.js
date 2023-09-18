@@ -17,10 +17,11 @@ ground.addAnimation("ground2.png",ground_img);
 }
 function draw(){
 background("white");
-drawSprites();
 if(keyDown("space")){
   trex.velocityY = -10;
 }
 trex.velocityY = trex.velocityY+0.8
 ground.velocityX = -2;
+trex.collide(ground);
+drawSprites();
 }
